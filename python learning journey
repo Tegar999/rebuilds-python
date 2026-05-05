@@ -1,0 +1,487 @@
+print("hello world")
+
+i = 2
+ 
+while i < 5:
+    i += 1
+    if i >= 2:
+        print("hai")
+  
+print("\nfree time? (revise this code)\n")    
+    
+while i <= 7:
+    i += 1
+    if i != 2:
+        print("sup")
+    
+    #next: task
+    #1 task:odd/even number ✓
+
+print("\nchatgpt task")
+
+even_odd = int(input("number:" ))
+
+while True:
+    if even_odd % 2 == 0:
+        print("EVEN")
+    else:
+        print("ODD")
+    break
+    
+    #2 task: simple even function
+    
+numbers = [2, 3, 5, 7, 9]
+count = 0
+total = 0
+
+for n in numbers:
+    if n % 2 == 0:
+        count += 1
+        total += n
+        
+print("total even:", count, "\ntotal even sum:", total)
+
+    #3 task: second biggest number
+    
+def second_biggest(numbers):
+    biggest = None
+    second = None
+    
+    for n in numbers:
+        if biggest is None or n > biggest:
+            second = biggest
+            biggest = n
+        elif second is None or (n > second and n != biggest):
+            second = n
+            
+    return second
+            
+result = second_biggest([2, 3, 7, 8, 9])             
+
+print("biggest second numbers:", result)
+    
+    #4 task: total even numbers
+
+numbers = [2, 1, 8, 9, 3]
+
+count_even = 0
+
+for n in numbers:
+    if n % 2 == 0:
+        count_even += 1
+    
+print("total even numbers:", count_even)
+
+    #5 task: function total numbers odd
+    
+def count_odd(numbers):
+    count = 0
+    
+    for n in numbers:
+        if n % 2 == 1:
+            count += 1
+            
+    return count
+    
+print("total odd numbers:", count_odd([3, 1, 5, 7, 6]))
+
+    #6 task: function biggest even
+
+def count_even(numbers):
+    even = 0   
+    biggest = None
+    
+    
+    for n in numbers:
+        if biggest is None or n >= biggest:
+            even = biggest
+            biggest = n
+                        
+    return even
+
+print("biggest even:", count_even([2, 3, 7, 8, 1]))
+
+    #6 task: most tiny
+    
+def count_odd(numbers):
+    smallest = 0
+    
+    for n in numbers:
+        if n % 2 == 1 and n > smallest:
+            n = smallest
+               
+print(count_odd([1, 3, 8, 5, 2]), "\n")
+
+    #7 task: daily habit score system
+    
+habits = ["study", "scroling", "exercise", "sleep", "study"]
+
+score = 0
+
+for n in habits:
+    if n == "study":
+        score += 2
+        print(n, " +2")
+    elif n == "exercise":
+        score += 3
+        print(n, " +3")
+    elif n == "sleep":
+        score += 1
+        print(n, " +1")
+    elif n == "scroling":
+        score += -2
+        print(n, " -2")
+
+print("score:", score)
+
+if score >= 5:
+    print("good")
+elif score >= 2:
+    print("okay")
+else:
+    print("bad")
+    
+    #8 task: study session tracker
+    
+print("study session tracker")
+
+task = input("task: ")
+session = int(input("time: "))
+
+if session > 20:
+    print("take a proper rest")
+elif session <= 20:
+    print("stay consistent")
+
+print(f"output:\n you finished {task} for {session} minutes")
+
+print("good job, keep following your schedule\n")
+
+    #9 task: return positive numbers
+    
+def count_positive(numbers):
+    positive = []
+    
+    for n in numbers:
+        if n > 0:
+            positive.append(n)
+     
+    return positive
+
+print("positive number:", count_positive([2, -1, -8, 6, 9]))
+    
+    #10 task: total negative numbers
+    
+def count_negative(numbers):
+    zero = 0
+    negative = 0
+    count_neg = 0
+       
+    for n in numbers:
+        if n < zero:
+            n = negative
+            count_neg += 1
+            
+    return count_neg
+        
+print("total negative numbers:", count_negative([1, -3, 8, -9, 3]))
+
+
+    #11 task: total positive numbers
+    
+def total_positive(numbers):
+    total = 0
+    
+    for n in numbers:
+        if n > 0:
+            total += n
+            
+    return total
+    
+print("total sum potive numbers:", total_positive([3, -1, 7, -5, 2]))
+        
+    #12 task: stable self tracker
+
+input("task name:")
+mood = int(input("define your mood? 1-10:\n"))
+energy = int(input("how about your energy? 1-10: \n"))
+promise = input("finished? \n (yes/no) :")
+
+if promise == "yes":
+    print("you keep yours promise today")
+
+elif promise == "no":
+    print("reflect, be hungry, try again")
+
+if energy < 4:
+    print("recover properly")
+    
+if mood < 4:
+    print("do small action, try it\n")
+
+    #13 task: earned freedom meter
+    
+study_hours = int(input("study_hours: "))
+
+task_finished = input("task finished (yes/no) ")
+
+energy = int(input("energy 1-10: "))
+
+if task_finished == "yes" and study_hours >= 2:
+    
+    print("you earned peaceful free time")
+
+elif task_finished == "no": 
+    print("finish your priority first")
+
+if energy < 4:
+    print("recovery is part of progress")
+    
+    #14 task: discipline choice system
+
+completed_task = input("task finished? (yes/no) ")
+
+distraction_level = int(input("distracted? 0-10: "))
+
+focus_level = int(input("focus? 1-10: "))
+
+if completed_task == "yes" and focus_level >= 7:
+    print("good job on your discipline")
+    
+if completed_task == "yes" and focus_level < 7:
+    print("good job, try improving your focus")
+
+if completed_task == "no":
+    print("you choose distraction today")
+
+if distraction_level >= 7:
+    print("your controo is weakening")
+    
+    #15 task: track total score function
+
+def count_score(subjects):
+    score = 0
+
+    for n in subjects:
+        if n == "math":
+            score += 3
+            print(n, "+3")
+        elif n == "english":
+            score += 2
+            print(n, "+2")
+        elif n == "python":
+            score += 4
+            print(n, "+4")
+        elif n == "break":
+            score -= 1
+            print(n, "-1")
+
+    return score
+
+result = count_score(["math", "break", "python", "english", "python"])
+
+print("total score:", result)
+
+if result >= 10:
+    print("excellent")
+elif result >= 5:
+    print("good")
+else:
+    print("keep going")
+    
+    #16 task: total sum of negative numbers
+    
+def count_negative(numbers):
+    total = 0
+
+    for n in numbers:
+        if n < 0:
+            total += n
+
+    return total
+
+result = count_negative([-3, 4, -7, -1, 2])
+
+print("total sum of negative numbers:", result)
+
+    #17 task: total sum of positive odd numbers 
+    
+def count_positive_odd(numbers):
+    count = 0
+
+    for n in numbers:
+        if n > 0 and n % 2 == 1:
+            count += 1
+
+    return count
+
+result = count_positive_odd([1, -2, 7, -3, 2])
+
+print("total sum of positive odd numbers:", result)
+
+    #18 task: return smallest negatuce numbers
+    
+def count_smallest_negative(numbers):
+    smallest = None
+    
+    for n in numbers:
+        if n < 0:
+            if smallest is None or n < smallest:
+                smallest = n                    
+            
+    return smallest 
+   
+result = count_smallest_negative([3, -1, 5, -7, 2])
+
+print("smallest negative numbers:", result)
+        
+        #19 tasks: return total positive even numbers
+        
+def total_positive_even(numbers):
+    total = 0
+    
+    for n in numbers:
+        if n > 0 and n % 2 == 0:
+            total += n
+        
+    return total
+    
+result = total_positive_even([3, -1, -2, 4, 2])
+
+print("sum of positive even:", result)
+
+    #20 task: return smallest positive odd numbers
+    
+def smallest_positive_odd(numbers):
+    smallest = None
+    
+    for n in numbers:
+        if n > 0 and n % 2 == 1:
+            if smallest is None or n < smallest:
+                smallest = n
+            
+    return smallest
+    
+result = smallest_positive_odd([1, -3, 4, -6, 7])
+
+print("smallest positive odd number:", result)
+            
+    #20 task: return biggest positive even numbers
+    
+def biggest_positive_even(numbers):
+    biggest = None
+    
+    for n in numbers:
+        if n > 0 and n % 2 == 0:
+            if biggest is None or n > biggest:
+                biggest = n
+    
+    return biggest
+    
+result = biggest_positive_even([3, -1, 2, -6, 4])
+
+print("biggest positive even numbers:", result)
+
+    #22 task: count numbers above average 5
+    
+def above_average_five(numbers):
+    count = 0
+    
+    for n in numbers:
+        if n > 5:
+            count += 1
+            
+    return count
+    
+result = above_average_five([2, -3, 5, 7, 9])
+
+print("numbers above average five:", result)
+
+    #23 task: return total odd positive numbers
+    
+def total_odd_positive(numbers):
+    total = 0
+   
+    for n in numbers:
+        if n % 2 == 1 and n > 0:
+            total += n
+            
+    return total
+    
+result = total_odd_positive([2, -2, 4, 7, 3])
+
+print("sum of odd positive numbers:", result)
+
+    #24 task: even negative numbers
+    
+def even_negative(numbers):
+    count = 0
+    
+    for n in numbers:
+        if n % 2 == 0 and n < 0:
+            count += 1
+            
+    return count
+    
+result = even_negative([3, -3, -4, 2, -2])
+
+print("total even negative numbers:", result) 
+
+    #26 task: distraction audit system
+    
+priority = input("\nmain task:")
+flight_time = int(input("hours spend:"))
+distraction = input("open social media: (yes/no)")
+productive_action = input("finished task: (yes/no)")
+
+if productive_action == "yes" and distraction == "no":
+    print("you protected your focus")
+    
+if productive_action == "yes" and distraction == "yes":
+    print("good effort, but your schedule leaked")
+
+if productive_action == "no":
+    print("use your system properly")
+    
+if flight_time >= 2:
+    print("strong session completed")
+    
+    #27 task: daily focus tracker
+    
+print("\ntrack yours schedule")
+
+task_name = input("task name:")
+
+focus_time = int(input("focus minute:"))
+
+finished_task = input("finished your task? (yes/no)")
+
+streak = input("streak? (yes/no)")
+
+distraction = input("doomscroling? (yes)")
+
+score = 0
+streak_count = 0
+
+if distraction == "yes":
+    score -= 2
+
+if focus_time >= 20 and streak == "yes":
+    score += 5
+    streak_count += 1
+    print("manageable task is the key of growth")
+
+elif focus_time >= 50 and streak == "no":
+    score += 2
+    print("manage your schedule, it's too intens")
+    
+logs = []
+
+logs.append({
+    "task", task_name,
+    "focus time", focus_time,
+    "distraction", distraction
+})
+
+print("\n=== Daily Log ===")
+print(logs)
